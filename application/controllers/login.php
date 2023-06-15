@@ -7,19 +7,6 @@ class login extends CI_Controller{
         $this->load->model->('m_login');
         $this->load->library('session');
     }
-// Sesion Di jalankan
-session_start();
-
-$username = $_POST['username'];
-$password = $_POST['password'];
-// membuat koneksi Ke MYSQL dan Database, Sesuaikan Dengan pengaturan di tempat anda 
-$koneksi=mysql_connect("localhost", "root", "");
-$db=mysql_select_db("koperasi_new",$koneksi);
-
-// mencari password berdasarkan username
-$query = "SELECT * FROM login WHERE username = '$username'";
-$hasil = mysql_query($query) or die("Error");
-$data  = mysql_fetch_array($hasil);
 
 if ($data['username'] && $password==$data['password']){
 
