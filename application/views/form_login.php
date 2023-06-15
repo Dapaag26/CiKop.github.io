@@ -7,7 +7,7 @@
 <body><br /><br />
 <div style="border:0; padding:10px; width:924px; height:auto;">
 <center><div id="content-inner-login">
-	<form action="login/login.php" method="POST"> 
+	<form action="login/aksi_login" method="POST"> 
 		<table cellpadding="0" cellspacing="5" bgcolor="#B0C4DE">
 			<tr height="36" bgcolor="#F8F8FF">
 				<th colspan="5">Login Your Authorization:</th>
