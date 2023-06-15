@@ -1,4 +1,12 @@
 <?php
+defined('BASEPATH') OR exit ('No direct script acces allowed');
+class login extends CI_Controller{
+
+    function __consturct(){
+        parent:: __consturct();
+        $this->load->model->('m_login');
+        $this->load->library('session');
+    }
 // Sesion Di jalankan
 session_start();
 
@@ -33,4 +41,10 @@ else{
 		</script>
 		<?php
     }
+
+    function logout(){
+        $this->session->sess_destroy();
+        redirect(base_url('login/'));
+    }
+}
 ?>

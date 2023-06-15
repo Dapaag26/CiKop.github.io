@@ -1,0 +1,17 @@
+<?php 
+ 
+class M_login extends CI_Model{	
+	function cek_login($table,$where){		
+		return $this->db->get_where($table,$where);
+	}
+	function daftar($data)
+    {
+         $this->db->insert('login',$data);
+    }
+     public function checkData($data)
+    {
+        $this->db->where($data);
+        $query = $this->db->get('login');
+        return $query->num_rows();
+    }	
+}
