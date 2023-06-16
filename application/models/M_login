@@ -14,6 +14,69 @@ class M_login extends CI_Model{
         $query = $this->db->get('login');
         return $query->num_rows();
     }	
+
+    // Member
+
+    function get_customer()
+  {
+    $result = $this->db->get('memeber');
+    return $result;
+  }
+  function add_data($username, $nama, $nik, $tgl_lahir, $jenis_kelamin, $pekerjaan, $alamat, $email, $no_hp, $tabungan, $pinjaman )
+  {
+    $data = array(
+      'username'        => $username,
+      'nama'            => $nama
+      'nik'             => $nik
+      'tgl_lahir'       => $tgl_lahir
+      'jenis_kelamin'   => $jenis_kelamin
+      'pekerjaan'       => $pekerjaan
+      'alamat'          => $alamat
+      'email'           => $email
+      'no_hp'           => $no_hp
+      'tabungan'        => $tabungan
+      'pinjaman'        => $pinjaman
+
+
+
+    );
+    $this->db->insert('member', $data);
+  }
+
+  function delete($member_id)
+  {
+    $this->db->where('member_id', $member_id);
+    $this->db->delete('member');
+  }
+
+  function get_member_id($member_id)
+  {
+    $query = $this->db->get_where('member', array('customer_id' => $customer_id));
+    return $query;
+  }
+  function update($member_id, $username, $nama, $nik, $tgl_lahir, $jenis_kelamin, $pekerjaan, $alamat, $email, $no_hp, $tabungan, $pinjaman )
+  {
+    $data = array(
+        'username'        => $username,
+        'nama'            => $nama
+        'nik'             => $nik
+        'tgl_lahir'       => $tgl_lahir
+        'jenis_kelamin'   => $jenis_kelamin
+        'pekerjaan'       => $pekerjaan
+        'alamat'          => $alamat
+        'email'           => $email
+        'no_hp'           => $no_hp
+        'tabungan'        => $tabungan
+        'pinjaman'        => $pinjaman
+    );
+    $this->db->where('member_id', $member_id);
+    $this->db->update('member', $data);
+  }
+}
+
+//Member
+
+    
 }
 
 /** 
