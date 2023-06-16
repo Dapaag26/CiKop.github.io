@@ -1,5 +1,6 @@
 <body bgcolor="#EEF2F7">
 <?php
+
 	include "koneksi.php";
 	$username	= $_POST['username'];
 	$nama		= $_POST['nama'];

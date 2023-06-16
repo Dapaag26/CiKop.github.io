@@ -5,9 +5,9 @@
 	</style>
 </head>
 <body><br /><br />
-<div style="border:0; padding:10px; width:924px; height:auto;">
-<center><div id="content-inner-login">
-	<form action="login/aksi_login" method="POST"> 
+<div style="borde         r:0; padding:10px; width:924px; height:auto;">
+<center><div id="content-inner-login"> 
+	<form action="login/aksi_login" method="POST">
 		<table cellpadding="0" cellspacing="5" bgcolor="#B0C4DE">
 			<tr height="36" bgcolor="#F8F8FF">
 				<th colspan="5">Login Your Authorization:</th>
@@ -22,7 +22,7 @@
 							Password &nbsp;: <input type="password" name="password" placeholder=" Password" size="21" maxlength="20" /><br /><br />
 							<input style="float:right" type="submit" value="LOGIN" /><br /></td>
 						</tr>
-						<tr height="10">
+						<tr hei  ght="10">
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
@@ -34,4 +34,4 @@
 </div></center>
 </div>
 </body>
-</html>l
+</html>

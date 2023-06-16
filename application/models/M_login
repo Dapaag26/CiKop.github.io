@@ -15,3 +15,28 @@ class M_login extends CI_Model{
         return $query->num_rows();
     }	
 }
+
+/** 
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class M_login extends CI_Model {
+
+    public function __construct() {
+        parent::__construct();
+        $this->load->database();
+    }
+
+    public function login($username, $password) {
+        // Query the database to check the credentials
+        $query = $this->db->get_where('users', array('username' => $username, 'password' => $password));
+        
+        if ($query->num_rows() > 0) {
+            return $query->row();
+        } else {
+            return false;
+        }
+    }
+
+}
+?>*/
