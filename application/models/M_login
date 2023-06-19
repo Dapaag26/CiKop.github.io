@@ -19,7 +19,7 @@ class M_login extends CI_Model{
 
     function get_customer()
   {
-    $result = $this->db->get('memeber');
+    $result = $this->db->get('member');
     return $result;
   }
   function add_data($username, $nama, $nik, $tgl_lahir, $jenis_kelamin, $pekerjaan, $alamat, $email, $no_hp, $tabungan, $pinjaman )
