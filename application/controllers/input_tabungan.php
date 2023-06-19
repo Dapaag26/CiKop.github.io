@@ -1,11 +1,13 @@
 <body bgcolor="#EEF2F7">
 <?php
-	include "koneksi.php";
-	$username	= $_POST['username'];
-	$nama		= $_POST['nama'];
-	$tgl_tabungan	= $_POST['thn_tabungan']."-".$_POST['bln_tabungan']."-".$_POST['tgl_tabungan'];
-	$jml_tabungan	= $_POST['jml_tabungan'];
-	//validasi data jika data kosong
+
+	defined('BASEPATH') OR exit ('No direct script acces allowed');
+	class intput_tabungan extends CI_Controller{
+		
+	    public function aksi_login(){
+			if ($this->session->userdata('logged_in')) {
+				redirect('dashboard');
+			}
 	if (empty($_POST['jml_tabungan'])) {
 	?>
 		<script language="JavaScript">
@@ -35,7 +37,9 @@
 	echo "tabungan Gagal Diinput, Silahkan diulangi!";
 	}
 	}
+}
 	//Tutup koneksi engine MySQL
 	mysql_close($Open);
+}
 ?>
 </body>
