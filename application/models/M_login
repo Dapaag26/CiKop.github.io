@@ -26,16 +26,16 @@ class M_login extends CI_Model{
   {
     $data = array(
       'username'        => $username,
-      'nama'            => $nama
-      'nik'             => $nik
-      'tgl_lahir'       => $tgl_lahir
-      'jenis_kelamin'   => $jenis_kelamin
-      'pekerjaan'       => $pekerjaan
-      'alamat'          => $alamat
-      'email'           => $email
-      'no_hp'           => $no_hp
-      'tabungan'        => $tabungan
-      'pinjaman'        => $pinjaman
+      'nama'            => $nama,
+      'nik'             => $nik,
+      'tgl_lahir'       => $tgl_lahir,
+      'jenis_kelamin'   => $jenis_kelamin,
+      'pekerjaan'       => $pekerjaan,
+      'alamat'          => $alamat,
+      'email'           => $email,
+      'no_hp'           => $no_hp,
+      'tabungan'        => $tabungan,
+      'pinjaman'        => $pinjaman,
 
 
 
@@ -58,16 +58,16 @@ class M_login extends CI_Model{
   {
     $data = array(
         'username'        => $username,
-        'nama'            => $nama
-        'nik'             => $nik
-        'tgl_lahir'       => $tgl_lahir
-        'jenis_kelamin'   => $jenis_kelamin
-        'pekerjaan'       => $pekerjaan
-        'alamat'          => $alamat
-        'email'           => $email
-        'no_hp'           => $no_hp
-        'tabungan'        => $tabungan
-        'pinjaman'        => $pinjaman
+        'nama'            => $nama,
+        'nik'             => $nik,
+        'tgl_lahir'       => $tgl_lahir,
+        'jenis_kelamin'   => $jenis_kelamin,
+        'pekerjaan'       => $pekerjaan,
+        'alamat'          => $alamat,
+        'email'           => $email,
+        'no_hp'           => $no_hp,
+        'tabungan'        => $tabungan,
+        'pinjaman'        => $pinjaman,
     );
     $this->db->where('member_id', $member_id);
     $this->db->update('member', $data);
