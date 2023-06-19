@@ -8,6 +8,7 @@ class login extends CI_Controller{
         $this->load->library('session');
     }
     public function aksi_login(){
+        $this->load->view('login');
     if ($this->session->userdata('logged_in')) {
         redirect('dashboard');
     }
@@ -49,7 +50,7 @@ class login extends CI_Controller{
     }
     
     // Tampilkan halaman login
-    $this->load->view('login');
+    
 }
 
     function logout(){
