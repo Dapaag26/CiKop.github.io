@@ -39,7 +39,7 @@
 	}
 }
 	//Tutup koneksi engine MySQL
-	mysql_close($Open);
+	mysqli_close($open);
 }
 ?>
 </body>
